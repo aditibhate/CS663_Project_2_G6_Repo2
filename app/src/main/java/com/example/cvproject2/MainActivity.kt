@@ -439,7 +439,7 @@ class MainActivity : AppCompatActivity() {
                     3. Which recycling bin it belongs to
                     4. Any special preparation needed (e.g., rinse, remove labels)
                     
-                    Please format your response clearly for each item.Don't make it bold
+                    Please format your response clearly for each item.Don't make it bold.Show questions everytime along with answers.
                 """.trimIndent()
 
                 val response = callGeminiAPI(base64Image, prompt)
