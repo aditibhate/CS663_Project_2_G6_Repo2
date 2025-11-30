@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E293B"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="♻️🤖Trash Talk"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="15dp"
+        android:background="#334155"
+        android:scaleType="fitCenter"
+        android:contentDescription="Captured image"/>
+
+    <ScrollView
+        android:id="@+id/scrollResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_above="@id/btnDetect"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#1E293B">
+
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Load an image to begin detection"
+            android:textSize="14sp"
+            android:textColor="#94A3B8"
+            android:padding="12dp"
+            android:lineSpacingExtra="4dp"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnDetect"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@id/btnGemini"
+        android:layout_marginBottom="8dp"
+        android:text="🔍 Detect Objects"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#10B981"/>
+
+    <Button
+        android:id="@+id/btnGemini"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@id/buttonLayout"
+        android:layout_marginBottom="10dp"
+        android:text="♻️ Get Recycling Tips"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#8B5CF6"
+        android:enabled="false"/>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Gallery"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#475569"/>
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Camera"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#6366F1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

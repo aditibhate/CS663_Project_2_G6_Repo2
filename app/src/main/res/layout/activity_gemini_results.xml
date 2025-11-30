@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E293B">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#334155"
+        android:elevation="4dp"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#FFFFFF"
+            android:contentDescription="Back button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="♻️ Recycling Guide"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </RelativeLayout>
+
+    <!-- Detected Items Banner -->
+    <TextView
+        android:id="@+id/tvDetectedItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:background="#475569"
+        android:padding="16dp"
+        android:text="Detected: plastic, paper, metal"
+        android:textSize="14sp"
+        android:textColor="#94A3B8"
+        android:textStyle="italic"/>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvDetectedItems"
+        android:padding="20dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false">
+
+        <TextView
+            android:id="@+id/tvGeminiResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading Gemini response..."
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:lineSpacingExtra="6dp"
+            android:textIsSelectable="true"/>
+
+    </ScrollView>
+
+</RelativeLayout>
